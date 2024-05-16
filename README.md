@@ -1,111 +1,134 @@
 # MarketPulse AI
 
-**MarketPulse AI** is a comprehensive, real-time stock market analysis and prediction platform. It integrates machine learning (ML) and deep learning (DL) models to forecast next-day stock prices using historical trends and live data streams. Designed for both novice and intermediate investors, it enhances investment decisions through actionable predictions and intuitive dashboards.
+**MarketPulse AI** is a comprehensive, real-time stock market analysis and prediction platform. It integrates machine learning (ML) and deep learning (DL) models to forecast next-day stock prices using historical trends and live data. Designed for novice and intermediate investors, it enhances financial decisions through actionable insights and interactive dashboards.
 
-## Project Theme and Objective
+---
 
-**Theme:** Science and Technology for Sustainable Future  
-**Sub-theme:** Mathematical Modeling and Computational Thinking
+## 📌 Theme & Objective
 
-### Problem Statement
+- **Theme:** Science and Technology for Sustainable Future  
+- **Sub-theme:** Mathematical Modeling and Computational Thinking
 
-The unpredictability of the stock market often deters new investors from participating. MarketPulse AI addresses this challenge by applying machine learning techniques to historical and real-time stock data, enabling users to make informed, data-driven financial decisions. The goal is to simplify market complexity and improve financial literacy through intelligent automation.
+**Problem:**  
+Stock market volatility discourages new investors. MarketPulse AI simplifies financial prediction by applying ML/DL techniques to historical and real-time stock data, improving financial literacy and decision-making.
 
-## Solution Overview
+---
 
-MarketPulse AI offers a web-based interface that connects users to a backend system powered by Flask. The system utilizes a variety of forecasting models, including:
+## ⚙️ Solution Overview
 
-- **ARIMA** – Autoregressive Integrated Moving Average
-- **Random Forest** – Ensemble learning-based regression
-- **LSTM** – Long Short-Term Memory networks for time series
-- **BiLSTM** – Bidirectional LSTM for enhanced sequence learning
+MarketPulse AI delivers a rich web interface powered by a Python backend and multiple forecasting models:
 
-These models are trained on market indicators and produce next-day price predictions for user-specified stocks. The results are delivered via a frontend dashboard enriched with interactive visualizations.
+- **ARIMA**: Statistical time-series modeling
+- **Random Forest**: Ensemble regression
+- **LSTM**: Long Short-Term Memory networks
+- **BiLSTM**: Bidirectional sequence prediction
 
-## System Capabilities
+Predictions and market data are visualized through a personalized dashboard.
 
-- **Authentication** – Secure login for personalized access
-- **Live Ticker Data** – Real-time market updates using Yahoo Finance APIs
-- **Candlestick Charts** – Graphical representation of stock trends
-- **Stock Search** – Dynamic search with suggestions and company summaries
-- **Watchlist Management** – Track selected stocks with add/remove functionality
-- **Pre-trained ML/DL Models** – Built-in support for multiple prediction algorithms
-- **Stock Chatbot** – Preprompted assistant for FAQs and ticker info
-- **MongoDB Integration** – Storage of user preferences, feedback, and queries
-- **Dark Mode** – Optional visual theme for low-light viewing
+---
 
-## Tech Stack
+## 🚀 Core Features
 
-### Frontend
+- 🔐 Secure Authentication
+- 📈 Real-Time Stock Ticker with yfinance
+- 📊 Candlestick & Line Charts for any ticker
+- 🔍 Company Search with Suggestions
+- 💬 Pretrained Chatbot for Market FAQs
+- 🧠 ML & DL Models: ARIMA, LSTM, BiLSTM, Random Forest
+- ⭐ Personalized Watchlist
+- 🌘 Dark Mode
+- 📝 Feedback system via MongoDB
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend:**
 - React.js (TypeScript)
 - Tailwind CSS
 - Shadcn UI
 
-### Backend
-- Python Flask API
+**Backend:**
+- Python (Flask)
 
-### Machine Learning
-- Scikit-learn, statsmodels (ARIMA)
-- TensorFlow/Keras (LSTM, BiLSTM)
+**Machine Learning:**
+- Scikit-learn, statsmodels
+- TensorFlow/Keras
 
-### Database
-- MongoDB (for storing user sessions, feedback, watchlist)
+**Database:**
+- MongoDB
 
-### APIs
-- `yfinance` (Yahoo Finance)
-- `Gemini` API (optional crypto market data)
+**APIs:**
+- yfinance (Yahoo Finance)
+- Gemini (crypto data, optional)
 
-## Architecture
+---
 
-The system is composed of three main modules:
+## 🧱 Architecture
 
-1. **Client**: Built using Vite + React, this module manages user interaction and data visualization.
-2. **Server**: A Python Flask backend handles API routes, ML/DL model inference, and communication with the database.
-3. **Prediction Module**: A hybrid of classical and deep learning models are triggered based on the type of stock and forecast request.
+![System Architecture](docs/assets/architecture_diagram.png)
 
-Models are modularized for performance and can be independently retrained or replaced. The system is containerized using Docker for portability and scalability.
+The system is divided into:
+- **Client**: React app via Vite
+- **Server**: Flask REST API
+- **Prediction Module**: Modular ML/DL pipelines with Docker support
 
-## Project Structure
+---
+
+## 💻 Dashboard Sample
+
+![Dashboard Screenshot](docs/assets/dashboard_mockup.png)
+
+---
+
+## 📁 Project Structure
 
 ```
 MarketPulse_AI/
 ├── client/               # React frontend
 ├── server/               # Flask backend
-├── prediction/           # ML/DL model implementations
-├── docs/                 # Architecture diagram, dashboard screenshots
+├── prediction/           # ML/DL models
+├── docs/                 # Architecture, screenshots
 ├── LICENSE
 ├── README.md
 ├── INSTALLATION.md
 └── FILE_STRUCTURE.md
 ```
 
-## Setup and Installation
+---
 
-To run the project locally:
+## 🧪 Setup & Installation
 
-1. Clone the repository
-2. Navigate into the project root
-3. Follow setup guides in `INSTALLATION.md`
+```bash
+# Clone repo
+git clone git@github.com:your-username/MarketPulse_AI.git
+cd MarketPulse_AI
 
-### Requirements
+# Setup backend
+cd server
+pip install -r requirements.txt
 
-- Python 3.9+
-- Node.js and npm
-- MongoDB instance (local or remote)
+# Setup frontend
+cd ../client
+npm install
+npm run dev
+```
 
-## Deployment
+See `INSTALLATION.md` for full setup instructions.
 
-- Frontend deployed via **Vercel**
-- Backend hosted on **Render**
-- Docker support for local and cloud deployment
+---
 
-## Visuals
+## 🌐 Deployment
 
-Refer to `docs/assets/architecture_diagram.png` and `docs/assets/dashboard_mockup.png` for an overview of the system architecture and sample dashboard.
+- **Frontend**: Vercel  
+- **Backend**: Render  
+- **Docker**: Full containerization supported
 
-## License
+---
 
-This project is licensed under the [Apache 2.0 License](./LICENSE).
+## 📜 License
+
+Licensed under the [Apache 2.0 License](LICENSE)
 
 ---
 
